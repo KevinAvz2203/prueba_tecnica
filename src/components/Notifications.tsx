@@ -1,5 +1,19 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
+import greater_than from "../../public/icons/greater-than.svg";
+import Image from "next/image";
+
+const items = [
+  {
+    title: "Order Protection Added",
+    desc: "Protection added for order #12345",
+  },
+  {
+    title: "Shipping Issue Reported",
+    desc: "A shipping issue has been reported",
+  },
+];
 
 export default function Notifications() {
   const [activeTab, setActiveTab] = useState<string>("Notifications");
@@ -61,8 +75,36 @@ export default function Notifications() {
         </nav>
       </div>
 
-      <div></div>
-      <div></div>
+      <div className="bg-white rounded-lg shadow-md p-2 mb-7">
+        <ul className="space-y-4">
+          {items.map((n, i) => (
+            <li
+              key={i}
+              className={`flex justify-between items-center ${
+                i === 0 ? "pb-4 border-b-1 border-gray-400" : ""
+              }`}
+            >
+              <div>
+                <p className="font-medium">{n.title}</p>
+                <p className="text-sm text-gray-600">{n.desc}</p>
+              </div>
+              <button
+                type="button"
+                className="bg-white text-sm text-black font-semibold shadow-md py-2 px-4 rounded-md cursor-pointer hover:bg-[#cfcecf] transition duration-200 ease-in-out"
+              >
+                Edit
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <Link href={"#"}>
+        <div className="flex justify-between items-center p-4 mb-4 bg-white rounded-lg shadow-md hover:bg-[#f7f7f7] transition duration-200 ease-in-out">
+          Notifications
+          <Image src={greater_than} alt="Check Shield" width={24} height={24} />
+        </div>
+      </Link>
     </div>
   );
 }

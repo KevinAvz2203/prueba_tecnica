@@ -6,12 +6,6 @@ import Reports from "@/components/Reports";
 export default function Home() {
   return (
     <main>
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Cart />
-        <Dashboard />
-        <Notifications />
-        <Reports />
-      </div> */}
       <div className="flex flex-wrap gap-8">
         <div className="w-full md:w-[40%]">
           <Cart />
