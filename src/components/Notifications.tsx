@@ -20,9 +20,9 @@ export default function Notifications() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-md">
+    <div className="bg-[#fbfbfd] rounded-xl p-6 shadow-md">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 pb-4 border-b-1 border-gray-200 ">
-        <h2 className="text-xl font-semibold">Notifications</h2>
+        <h1 className="text-2xl font-bold">Notifications</h1>
 
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -75,13 +75,13 @@ export default function Notifications() {
         </nav>
       </div>
 
-      <div className="bg-white rounded-lg shadow-md p-2 mb-7">
-        <ul className="space-y-4">
+      <div className="flex flex-col bg-white rounded-lg shadow-md p-7 mb-8 ">
+        <ul className="space-y-9">
           {items.map((n, i) => (
             <li
               key={i}
-              className={`flex justify-between items-center ${
-                i === 0 ? "pb-4 border-b-1 border-gray-400" : ""
+              className={`flex justify-between items-center  ${
+                i === 0 ? "mb-4 pb-4 border-b-1 border-gray-400" : ""
               }`}
             >
               <div>
@@ -100,9 +100,9 @@ export default function Notifications() {
       </div>
 
       <Link href={"#"}>
-        <div className="flex justify-between items-center p-4 mb-4 bg-white rounded-lg shadow-md hover:bg-[#f7f7f7] transition duration-200 ease-in-out">
+        <div className="flex justify-between items-center p-6 mt-5 mb-4 bg-white rounded-lg shadow-md hover:bg-[#f7f7f7] transition duration-200 ease-in-out">
           Notifications
-          <Image src={greater_than} alt="Check Shield" width={24} height={24} />
+          <Image src={greater_than} alt="Check Shield" width={20} height={24} />
         </div>
       </Link>
     </div>

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Cart() {
   return (
-    <div className="flex flex-col bg-white rounded-xl p-6 shadow-md space-y-9">
+    <div className="flex flex-col bg-[#fbfbfd] rounded-xl p-6 shadow-md space-y-9">
       <div className="flex justify-between items-center pb-4 mb-4 border-b-1 border-gray-200">
         <h1 className="text-2xl font-bold">Cart</h1>
         <span className="text-2xl text-gray-500 cursor-pointer hover:text-gray-700">

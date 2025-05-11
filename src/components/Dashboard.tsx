@@ -47,9 +47,9 @@ export default function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-white rounded-xl p-6 shadow-md">
+    <div className="bg-[#fbfbfd] rounded-xl p-6 shadow-md">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-4 mb-4 border-b-1 border-gray-200 ">
-        <h2 className="text-xl font-semibold">Insure Booster</h2>
+        <h1 className="text-2xl font-bold">Insure Booster</h1>
 
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
