@@ -7,19 +7,19 @@ export default function Home() {
   return (
     <main>
       <div className="flex flex-wrap gap-8">
-        <div className="w-full md:w-[40%]">
+        <div className="w-full lg:w-[40%] h-full">
           <Cart />
         </div>
 
-        <div className="w-full md:w-[55%]">
+        <div className="w-full lg:w-[55%] h-full">
           <Dashboard />
         </div>
 
-        <div className="w-full md:w-[45%]">
+        <div className="w-full lg:w-[45%] h-full">
           <Notifications />
         </div>
 
-        <div className="w-full md:w-[50%]">
+        <div className="w-full lg:w-[50%] h-full">
           <Reports />
         </div>
       </div>
